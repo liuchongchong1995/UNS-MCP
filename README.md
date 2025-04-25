@@ -1,5 +1,7 @@
 # Unstructured API MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@liuchongchong1995/uns-mcp)](https://smithery.ai/server/@liuchongchong1995/uns-mcp)
+
 An MCP server implementation for interacting with the Unstructured API. This server provides tools to list sources and workflows.
 
 ## Available Tools
@@ -104,6 +106,14 @@ This guide provides step-by-step instructions to set up and configure the UNS_MC
 No additional installation is required when using `uvx` as it handles execution. However, if you prefer to install the package directly:
 ```bash
 uv pip install uns_mcp
+```
+
+### Installing via Smithery
+
+To install Unstructured API Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@liuchongchong1995/uns-mcp):
+
+```bash
+npx -y @smithery/cli install @liuchongchong1995/uns-mcp --client claude
 ```
 
 #### Configure Claude Desktop
