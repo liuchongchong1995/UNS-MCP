@@ -1,0 +1,19 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - unstructuredApiKey
+    properties:
+      unstructuredApiKey:
+        type: string
+        description: Unstructured API key used to authenticate with the Unstructured API.
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'uns_mcp', env: { UNSTRUCTURED_API_KEY: config.unstructuredApiKey } })
+  exampleConfig:
+    unstructuredApiKey: YOUR_UNSTRUCTURED_API_KEY
